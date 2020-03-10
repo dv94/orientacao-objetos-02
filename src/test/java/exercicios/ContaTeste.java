@@ -34,8 +34,10 @@ public class ContaTeste {
     @Test
     public void metodoDepositar(){
         Double valorDepositado = 200.00;
-        Double valorEsperado = c1.depositar();   // verificar erro
-        assertEquals(valorDepositado,valorEsperado);
+
+        Double valorEsperado = c1.getSaldo() + valorDepositado;
+        c1.depositar(valorDepositado);// verificar erro
+        assertEquals(valorEsperado,c1.getSaldo());
     }
     @Test
     public void metodoSacar(){
@@ -58,10 +60,6 @@ public class ContaTeste {
     public void metodoTransferirValorInvalido() {
     }
     //------------------------------------------
-    @Test
-    public void metodoDepositar(){
-    }
-
     @Test
     public void metodoDepositarValorInvalido() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> c1.depositar(-200.0));
