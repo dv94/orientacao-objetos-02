@@ -1,5 +1,7 @@
 package exercicios;
 
+import com.sun.media.sound.DataPusher;
+
 public class Circulo {
 
     public Double raio;
@@ -19,12 +21,12 @@ public class Circulo {
         public void setRaio(Double raio) {
             this.raio = raio;
         }
-            public void calcularArea(Double raio){
-                this.raio = this.PI * raio * raio;
+            public double calcularArea(){
+                return  this.PI * this.raio * this.raio;
             }
 
-                public void calcularPerimentro(Double raio){
-                    this.raio = 2 * (this.PI * raio);
+                public double calcularPerimentro(){
+                    return  2 * (this.PI * raio);
                 }
 
 }

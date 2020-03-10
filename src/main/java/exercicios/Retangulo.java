@@ -21,11 +21,11 @@ public class Retangulo {
         public void setAltura(Double altura) {
             this.altura = altura;
         }
-            public void calcularArea(Double area){
-                area = base * altura;
+            public double calcularArea(){
+                return  base * altura;
             }
-                public void calcularPerimentro(Double perimetro){
-                    perimetro = 2 * (base + altura);
+                public double calcularPerimentro(){
+                    return  2 * (base + altura);
                 }
 
 }
