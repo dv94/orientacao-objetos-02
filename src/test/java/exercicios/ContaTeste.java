@@ -34,9 +34,8 @@ public class ContaTeste {
     @Test
     public void metodoDepositar(){
         Double valorDepositado = 200.00;
-
         Double valorEsperado = c1.getSaldo() + valorDepositado;
-        c1.depositar(valorDepositado);// verificar erro
+        c1.depositar(valorDepositado);
         assertEquals(valorEsperado,c1.getSaldo());
     }
     @Test
