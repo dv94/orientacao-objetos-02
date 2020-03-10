@@ -40,9 +40,14 @@ public class ContaTeste {
     }
     @Test
     public void metodoSacar(){
+        Double valorSacado = 100.00;
+        Double valorEsperado = c1.getSaldo() - valorSacado;
+        c1.sacar(valorSacado);
+        assertEquals(valorEsperado,c1.getSaldo());
     }
     @Test
     public void metodoSacarSaldoSuficiente() {
+
     }
     @Test
     public void metodoSacarSaldoInsuficiente() {
@@ -51,6 +56,14 @@ public class ContaTeste {
 
     @Test
     public void metodoTransferir(){
+        Double valorTranferido = 300.00;
+       // Double valorEsperado = c1.getSaldo() - valorTranferido;
+        Conta c2 = new Conta();
+        c2.setSaldo(0.00);
+        c1.transferir(c2,valorTranferido);
+
+        System.out.println( c2.getSaldo());
+        assertEquals(valorTranferido, c2.getSaldo());
     }
     @Test
     public void metodoTransferirValorValido() {
@@ -61,8 +74,6 @@ public class ContaTeste {
     //------------------------------------------
     @Test
     public void metodoDepositarValorInvalido() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> c1.depositar(-200.0));
-        assertEquals("Valor deve ser maior que zero.", exception.getMessage());
     }
 
 

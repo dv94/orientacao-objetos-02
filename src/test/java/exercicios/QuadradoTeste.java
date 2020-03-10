@@ -32,13 +32,13 @@ public class QuadradoTeste {
     @Test
     public void metodoCalculoArea(){
         Double valorEsperado = 100.0;
-        Double valorObtido = q1.calcularArea(); // verificar erro
+        Double valorObtido = q1.calcularArea();
         assertEquals(valorEsperado,valorObtido);
     }
     @Test
     public void metodoCalcularPerimetro(){
         Double valorEsperado = 10.0;
-        Double valorObtido = q1.calcularPerimetro(); // verificar erro
+        Double valorObtido = q1.calcularPerimetro();
         assertEquals(valorEsperado,valorObtido);
     }
 }

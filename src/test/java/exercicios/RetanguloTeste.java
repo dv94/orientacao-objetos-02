@@ -33,13 +33,13 @@ public class RetanguloTeste {
     @Test
     public void metodoCalculoArea(){
         Double valorEsperado = 200.0;
-        Double valorObtido = r1.calcularArea(); // verificar erro
+        Double valorObtido = r1.calcularArea();
         assertEquals(valorEsperado,valorObtido);
     }
     @Test
     public void metodoCalcularPerimetro(){
         Double valorEsperado = 60.0;
-        Double valorObtido = r1.calcularPerimentro(); // verificar erro
+        Double valorObtido = r1.calcularPerimentro();
         assertEquals(valorEsperado,valorObtido);
     }
 }
